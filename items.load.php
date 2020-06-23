@@ -599,19 +599,50 @@ function pwGenerate(elem)
    );
 }
 
+
+
 function pwCopy(elem)
 {
     if (elem != "") elem = elem+"_";
     $("#"+elem + 'pw2').val($("#"+elem + 'pw1').val());
 
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($("#"+elem + 'pw1').val()).select();
-    document.execCommand("copy");
-    $temp.remove();
+    copyTextToClipboard($("#"+elem + 'pw1').val());
 }
 
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
 
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+    });
+}
 
 function copyToClipboard(elem) {
     // create hidden text element, if it doesn't already exist
