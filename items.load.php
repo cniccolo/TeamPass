@@ -601,8 +601,6 @@ function pwGenerate(elem)
 
 function pwCopy(elem)
 {
-
-    debugger;
     if (elem != "") elem = elem+"_";
     $("#"+elem + 'pw2').val($("#"+elem + 'pw1').val());
 
