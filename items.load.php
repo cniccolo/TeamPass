@@ -606,13 +606,11 @@ function pwCopy(elem)
     if (elem != "") elem = elem+"_";
     $("#"+elem + 'pw2').val($("#"+elem + 'pw1').val());
 
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($("#"+elem + 'pw1').text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-
-    $("#message_box").html("<?php echo addslashes($LANG['pw_copied_clipboard']); ?>").show().fadeOut(1000);
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($("#"+elem + 'pw1').val()).select();
+    document.execCommand("copy");
+    $temp.remove();
 }
 
 
