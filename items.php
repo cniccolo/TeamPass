@@ -496,7 +496,7 @@ echo '
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
-                <span class="fa-stack fa-lg tip" title="'.addslashes($LANG['item_menu_copy_login']).'" data-clipboard-action="copy" data-clipboard-target="#bar" style="cursor:pointer;">
+                <span class="fa-stack fa-lg tip" title="'.$LANG['copy'].'" onclick="pwCopy(\'\')" style="cursor:pointer;">
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
