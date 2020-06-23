@@ -601,6 +601,8 @@ function pwGenerate(elem)
 
 function pwCopy(elem)
 {
+
+    debugger;
     if (elem != "") elem = elem+"_";
     $("#"+elem + 'pw2').val($("#"+elem + 'pw1').val());
 
@@ -2517,6 +2519,20 @@ function open_edit_item_div(restricted_to_roles)
     } else {
         $('#edit_pw_size').val($('#edit_pw1').val().length);
     }
+
+    clipboard = new ClipboardJS('.copy_generated');
+    clipboard.on('success', function(e) {
+        $("#message_box").html("<?php echo addslashes($LANG['pw_copied_clipboard']); ?>").show().fadeOut(1000);
+        itemLog(
+            "at_password_copied",
+            e.trigger.dataset.clipboardId,
+            $('#item_label_'+e.trigger.dataset.clipboardId).text()
+        );
+        e.clearSelection();
+    });
+
+
+
 
     //open dialog
     $("#div_formulaire_edition_item_info").addClass("hidden").html("");
