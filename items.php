@@ -703,7 +703,7 @@ echo '
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
-                <span class="fa-stack fa-lg tip" title="'.$LANG['copy'].'" onclick="pwCopy(\'edit\')" style="cursor:pointer;">
+                <span class="fa-stack fa-lg tip copy_generated" title="'.$LANG['copy'].'" onclick="pwCopy(\'edit\')" style="cursor:pointer;" data-clipboard-target="#edit_pw1">
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
