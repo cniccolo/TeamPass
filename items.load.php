@@ -5112,7 +5112,8 @@ function globalItemsSearch()
                     $("#full_items_list").append(
                     '<li class="item trunc_line" id="'+value.item_id+'"><a id="fileclass'+value.item_id+'" class="file_search">' +
                     '<span class="fa fa-key mi-yellow tip" onclick="AfficherDetailsItem(\''+value.item_id+'\',\''+value.sk+'\',\''+value.expired+'\', \''+value.restricted+'\', \''+value.display+'\', \''+value.open_edit+'\', \''+value.reload+'\', \''+value.tree_id+'\')" title="<?php echo addslashes($LANG['click_to_edit']); ?>"></span>&nbsp;' +
-                        '<span class="truncate" onclick="AfficherDetailsItem(\''+value.item_id+'\',\''+value.sk+'\',\''+value.expired+'\', \''+value.restricted+'\', \''+value.display+'\', \'\', \''+value.reload+'\', \''+value.tree_id+'\')"><b>'+value.label + '</b>' +
+                        '<span class="truncate" onclick="AfficherDetailsItem(\''+value.item_id+'\',\''+value.sk+'\',\''+value.expired+'\', \''+value.restricted+'\', \''+value.display+'\', \'\', \''+value.reload+'\', \''+value.tree_id+'\')"' +
+                        ' ondblclick="AfficherDetailsItem(\''+value.item_id+'\',\''+value.sk+'\',\''+value.expired+'\', \''+value.restricted+'\', \''+value.display+'\', \'1\', \''+value.reload+'\', \''+value.tree_id+'\')"><b>'+value.label + '</b>' +
                         '&nbsp;<span style="font-size:11px;font-style:italic; background-color:#f2e9e5;">&nbsp;<i class="fa fa-folder-o"></i>&nbsp;'+value.folder+'&nbsp;</span>&nbsp;'+value.desc+'' +
                         '</span><span style="float:right;margin:2px 10px 0px 0px;">' +
                         value.login +
