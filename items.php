@@ -489,7 +489,7 @@ echo '
                     <input type="checkbox" id="pw_symbols" class="pw_definition" /><label for="pw_symbols">@#&amp;</label>
                     <input type="checkbox" id="pw_secure" checked="checked" /><label for="pw_secure">'.$LANG['secure'].'</label>
                     &nbsp;<label for="pw_size">'.$LANG['size'].' : </label>
-                    &nbsp;<input type="text" size="2" id="pw_size" value="8" style="font-size:10px;" />
+                    &nbsp;<input type="text" size="2" id="pw_size" value="14" style="font-size:10px;" />
                 </span>
 
                 <span class="fa-stack fa-lg tip" title="'.$LANG['pw_generate'].'" onclick="pwGenerate(\'\')" style="cursor:pointer;">
@@ -703,7 +703,7 @@ echo '
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
-                <span class="fa-stack fa-lg tip" title="'.$LANG['copy'].'" onclick="pwCopy(\'edit\')" style="cursor:pointer;">
+                <span class="fa-stack fa-lg tip " title="'.$LANG['copy'].'" onclick="pwCopy(\'edit\')" style="cursor:pointer;">
                     <i class="fa fa-square fa-stack-2x"></i>
                     <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
                 </span>&nbsp;
