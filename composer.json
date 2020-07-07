@@ -20,7 +20,6 @@
     "require": {
         "php": ">=5.5.0",
         "ext-mysqli": ">=5.1.0",
-        "ext-mcrypt": "*",
         "ext-mbstring": "*",
         "ext-openssl": "*",
         "ext-bcmath": "*",
